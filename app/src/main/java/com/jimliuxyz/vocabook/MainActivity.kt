@@ -1,24 +1,30 @@
 package com.jimliuxyz.vocabook
 
+import android.content.Intent
 import android.os.Bundle
-import android.support.design.widget.Snackbar
-import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
-
+import com.jimliuxyz.vocabook.editor.EditorActivity
+import com.jimliuxyz.vocabook.prefs.MainSettingActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity() {
+
+class MainActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
 
         fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
+            gotoEditor()
         }
+        gotoEditor()
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -32,8 +38,18 @@ class MainActivity : AppCompatActivity() {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         return when (item.itemId) {
-            R.id.action_settings -> true
+            R.id.action_settings -> {
+                gotoMainSetting(); true
+            }
             else -> super.onOptionsItemSelected(item)
         }
+    }
+
+    fun gotoMainSetting() {
+        startActivityForResult(Intent(this@MainActivity, MainSettingActivity::class.java), 0)
+    }
+
+    fun gotoEditor() {
+        startActivity(Intent(this@MainActivity, EditorActivity::class.java))
     }
 }

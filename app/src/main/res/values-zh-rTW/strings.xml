@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">vocabook2</string>
+    <string name="cfg_dark">暗色系</string>
+    <string name="cfg_theme">主題配色</string>
+</resources>
