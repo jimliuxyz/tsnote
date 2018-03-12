@@ -35,7 +35,7 @@ class MemLeakDetector {
                         Log.d(TAG, "${ety.key} : ${ety.value}")
                     }
                 }
-            }, 0, 3000)
+            }, 1000, 60 * 1000)
         }
     }
 }

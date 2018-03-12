@@ -1,9 +1,11 @@
-package com.jimliuxyz.vocabook
+package com.jimliuxyz.vocabook.main
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import com.jimliuxyz.vocabook.BaseActivity
+import com.jimliuxyz.vocabook.R
 import com.jimliuxyz.vocabook.editor.EditorActivity
 import com.jimliuxyz.vocabook.prefs.MainSettingActivity
 import kotlinx.android.synthetic.main.activity_main.*
