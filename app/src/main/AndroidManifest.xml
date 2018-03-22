@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.jimliuxyz.vocabook">
+    package="com.jimliuxyz.tsnote">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -10,7 +10,7 @@
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
 
     <application
-        android:name=".BookApplication"
+        android:name="com.jimliuxyz.tsnote.BookApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher_notes"
         android:label="@string/app_name"
@@ -18,7 +18,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.jimliuxyz.vocabook.activity.main.MainActivity"
+            android:name="com.jimliuxyz.tsnote.activity.main.MainActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,9 +26,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.jimliuxyz.vocabook.activity.prefs.MainSettingActivity" />
+        <activity android:name="com.jimliuxyz.tsnote.activity.prefs.MainSettingActivity" />
         <activity
-            android:name="com.jimliuxyz.vocabook.activity.editor.EditorActivity"
+            android:name="com.jimliuxyz.tsnote.activity.editor.EditorActivity"
             android:label="@string/title_activity_editor"
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="adjustResize|stateUnchanged">

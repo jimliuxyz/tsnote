@@ -1,13 +1,13 @@
 <resources>
-    <string name="app_name">Trans Notes</string>
+    <string name="app_name">Trans Note</string>
     <string name="action_settings">Settings</string>
     <string name="cfg_dark">Dark</string>
     <string name="cfg_theme">Theme</string>
-    <string name="title_activity_editor">Notes</string>
+    <string name="title_activity_editor">TransNote</string>
     <string name="def_editor_text">Click paste icon to paste your content here</string>
     <string name="def_editor_note">paste icon|top-right corner</string>
     <string name="select_a_word">Select a word...</string>
-    <string name="input_note">Input notes...</string>
+    <string name="input_note">Input note...</string>
     <string name="alert_delete_book">Delete \"%s\"?</string>
     <string name="ans_yes">Yes</string>
     <string name="ans_no">No</string>

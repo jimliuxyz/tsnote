@@ -14,4 +14,6 @@
     <string name="header_note">譯文</string>
     <string name="title_activity_editor">翻譯筆記</string>
     <string name="action_settings">設定</string>
+    <string name="def_editor_text">Click paste icon to paste your content here</string>
+    <string name="def_editor_note">paste icon|top-right corner</string>
 </resources>
