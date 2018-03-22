@@ -13,16 +13,22 @@ abstract class BaseActivity : DaggerAppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
 
         darktheme = this.getPref(R.string.key_theme, false)
-        setTheme(if (darktheme) R.style.AppTheme_Dark else R.style.AppTheme)
+        setTheme(if (darktheme) R.style.AppThemeDark else R.style.AppTheme)
 
         super.onCreate(savedInstanceState)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
+    }
+
+    override fun onResume() {
+        super.onResume()
 
         if (darktheme != this.getPref(R.string.key_theme, false)) {
-            recreate()
+            //for replacing recreate() to avoid error
+            this.finish()
+            this.startActivity(this.getIntent())
         }
     }
 }

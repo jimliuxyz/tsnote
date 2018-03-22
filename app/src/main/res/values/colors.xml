@@ -6,4 +6,33 @@
     <color name="colorPrimary_dark">#131314</color>
     <color name="colorPrimaryDark_dark">#269900</color>
     <color name="colorTextHighlight">#77ba9b00</color>
+
+    <!-- Light Theme -->
+    <color name="lightColorPrimary">@color/darkGunmetal</color>
+    <color name="lightColorPrimaryDark">@color/eerieBlack</color>
+    <!--<color name="lightColorAccent">@color/carrotOrange</color>-->
+    <color name="lightColorAccent">#1d67bc</color>
+    <color name="lightBackground">@color/gunmetal</color>
+    <color name="lightForeground">@color/putty</color>
+    <color name="lightDividerColor">@color/eggshell_38</color>
+    <color name="lightTextColorPrimary">@color/eggshell</color>
+    <color name="lightTextColorSecondary">@color/eggshell_87</color>
+    <color name="lightTextColorTertiary">@color/eggshell_54</color>
+    <color name="lightTextColorLink">@color/winterBlue</color>
+    <color name="lightTextColorPrimaryInverse">@color/darkGunmetal</color>
+    <color name="lightTextColorSecondaryInverse">@color/darkGunmetal_54</color>
+    <color name="lightTextColorTertiaryInverse">@color/darkGunmetal_38</color>
+    <color name="lightTextColorLinkInverse">@color/lakeBlue</color>
+
+    <!-- Night Theme -->
+    <color name="nightColorPrimary">@color/white</color>
+    <color name="nightColorPrimaryDark">@color/whiteSmoke</color>
+    <!--<color name="nightColorAccent">@color/sanguineRed</color>-->
+    <color name="nightColorAccent">#689F38</color>
+    <color name="nightColorNormal">@color/onyx_87</color>
+    <color name="nightBackground">@color/lightGray</color>
+    <color name="nightForeground">@color/agateBlue</color>
+    <color name="nightDividerColor">@color/gray_38</color>
+    <color name="nightTextColorLink">@color/agateBlue</color>
+    <color name="nightTextColorLinkInverse">@color/winterBlue</color>
 </resources>

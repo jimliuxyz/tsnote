@@ -14,24 +14,32 @@ import java.util.*
         parentColumns = ["id"],
         childColumns = ["bookId"],
         onDelete = CASCADE)])
-@TypeConverters(BookContent.WordConverter::class)
+@TypeConverters(BookContent.Converter::class)
 data class BookContent(
-        var bookId: Long,
-        var words: ArrayList<Word> = ArrayList<Word>(),
+        var bookId: String,
+        var story: String,
+        var keyNotes: ArrayList<KeyNote> = ArrayList<KeyNote>(),
         @PrimaryKey(autoGenerate = true) var id: Long = 0
 ) {
 
-    class WordConverter {
+    companion object {
+        fun clone(content: BookContent): BookContent {
+            return BookContent(content.bookId, content.story,
+                    ArrayList(content.keyNotes.map { KeyNote(it.key, it.note) }))
+        }
+    }
+
+    class Converter {
         @TypeConverter
-        fun word2Json(words: ArrayList<Word>): String {
+        fun word2Json(words: ArrayList<KeyNote>): String {
             val json = Gson().toJson(words)
             return json
         }
 
         @TypeConverter
-        fun json2Word(json: String): ArrayList<Word> {
-            val turnsType = object : TypeToken<ArrayList<Word>>() {}.type
-            val list = Gson().fromJson<ArrayList<Word>>(json, turnsType)
+        fun json2Word(json: String): ArrayList<KeyNote> {
+            val turnsType = object : TypeToken<ArrayList<KeyNote>>() {}.type
+            val list = Gson().fromJson<ArrayList<KeyNote>>(json, turnsType)
             return list
         }
     }

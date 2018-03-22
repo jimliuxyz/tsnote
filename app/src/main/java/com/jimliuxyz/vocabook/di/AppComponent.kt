@@ -13,7 +13,7 @@ import javax.inject.Singleton
 @Component(modules = [AndroidSupportInjectionModule::class,
     ApplicationModule::class,
     ActivityBindingModule::class,
-    BookModule::class])
+    MutableModule::class])
 interface AppComponent : AndroidInjector<BookApplication> {
 
     @Component.Builder

@@ -11,7 +11,7 @@ import com.jimliuxyz.vocabook.data.book.BookInfo
 /**
  * Created by jimliu on 2018/3/1.
  */
-@Database(entities = [BookInfo::class, BookContent::class], version = 7)
+@Database(entities = [BookInfo::class, BookContent::class], version = 12)
 abstract class BookDatabase : RoomDatabase() {
 
     abstract fun getDao(): BookDao

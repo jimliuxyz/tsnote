@@ -1,158 +1,25 @@
 <resources>
-    <string name="app_name">vocabook1</string>
+    <string name="app_name">Trans Notes</string>
     <string name="action_settings">Settings</string>
     <string name="cfg_dark">Dark</string>
     <string name="cfg_theme">Theme</string>
-    <string name="title_activity_editor">EditorActivity</string>
-    <string name="def_editor_text">
-"Uh-oh, running out of breath, but I
-噢不 我快要窒息了
-Oh, I, I, I got stamina
-但我還有 我還有撐下去的一口氣
-Uh-oh, running now, I close my eyes
-噢不 我閉上雙眼往前狂奔
-Well, oh, I got stamina
-幸好 我還有頑強的毅力
-And uh-oh, I see another mountain to climb
-噢不 另一座高山又出現在我眼前了
-But I, I, I got stamina
-但我是 我是不屈不撓的
-And uh-oh, I need another love, be mine
-噢不 我需要一份專屬於我的愛來陪我走下去
-Cause I, I, I got stamina
-因為我絕對 絕對不會輕易認輸
-
-Don't give up, I won't give up
-別放棄 我永遠不會放棄
-Don't give up, no no no
-不論發生任何事情都絕不屈服
-Don't give up, I won't give up
-別放棄 我永遠不會放棄
-Don't give up, no no no
-不論發生任何事情都絕不屈服
-
-I'm free to be the greatest, I'm alive
-我可以成為最偉大的傳奇 因為我是如此神采飛揚
-I'm free to be the greatest here tonight, the greatest
-我可以成為最偉大的傳奇 就在這裡 就在今夜
-The greatest, the greatest alive
-我就是最偉大的 最耀眼的傳奇
-The greatest, the greatest alive
-我就是最偉大的 最耀眼的傳奇
-
-
-Well, uh-oh, running out of breath, but I
-噢不 我快要窒息了
-Oh, I, I, I got stamina
-但我還有 我還有撐下去的一口氣
-Uh-oh, running now, I close my eyes
-噢不 我閉上雙眼往前狂奔
-Well, oh, I got stamina
-幸好 我還有頑強的毅力
-And oh yeah, running through the waves of love
-噢 我不斷逃離愛情巨浪的摧殘
-But I, I got stamina
-但我是 我是不屈不撓的
-And oh yeah, I'm running and I've just enough
-即便我已經筋疲力竭 我也不會停下腳步
-And uh-oh, I got stamina
-因為我絕對 絕對不會輕易認輸
-
-Don't give up, I won't give up
-別放棄 我永遠不會放棄
-Don't give up, no no no
-不論發生任何事情都絕不屈服
-Don't give up, I won't give up
-別放棄 我永遠不會放棄
-Don't give up, no no no
-不論發生任何事情都絕不屈服
-
-I'm free to be the greatest, I'm alive
-我可以成為最偉大的傳奇 因為我是如此神采飛揚
-I'm free to be the greatest here tonight, the greatest
-我可以成為最偉大的傳奇 就在這裡 就在今夜
-The greatest, the greatest alive
-我就是最偉大的 最耀眼的傳奇
-The greatest, the greatest alive
-我就是最偉大的 最耀眼的傳奇
-
-Oh-oh, I got stamina
-噢 我擁有無堅不摧的毅力
-Oh-oh, I got stamina
-噢 我擁有無堅不摧的毅力
-Oh-oh, I got stamina
-噢 我擁有無堅不摧的毅力
-Oh-oh, I got stamina
-噢 我擁有無堅不摧的毅力
-
-Hey, I am the truth
-嘿 我就是真理
-Hey, I am the wisdom of the fallen — I'm the youth
-嘿 我就是出自墮落的智慧-我就是年少輕狂
-Hey, I am the greatest
-嘿 我就是最偉大的傳奇
-Hey, this is the proof
-嘿 證據就在這裡
-Hey, I work hard, pray hard, pay dues, hey
-嘿 我辛勤工作 虔誠禱告 負盡責任
-I transform with pressure — I'm hands-on with effort
-我親手將所有的壓力轉化為可能性
-I fell twice before my bounce back was special
-我失足兩次後還是捲土重來了
-Letdowns will get you, and the critics will test you
-挫敗會纏著你 輿論會考驗你
-But the strong will survive, another scar may bless you, ah
-但你總會堅韌的熬過來 你身上的傷疤終將成為你的護身符
-
-Don't give up (no no), I won't give up (no no)
-別放棄 我永遠不會放棄
-Don't give up, no no no (nah)
-不論發生任何事情都絕不屈服
-Don't give up, I won't give up
-別放棄 我永遠不會放棄
-Don't give up, no no no
-不論發生任何事情都絕不屈服
-
-I'm free to be the greatest, I'm alive
-我可以成為最偉大傳奇 因為我是如此神采飛揚
-I'm free to be the greatest here tonight, the greatest
-我可以成為最偉大傳奇 就在這裡 就在今夜
-The greatest, the greatest alive
-我就是最偉大 最耀眼的傳奇
-(Don't give up, don't give up, don't give up, no no no)
-(別放棄 我永遠不會放棄 不論發生任何事情都絕不屈服)
-The greatest, the greatest alive
-我就是最偉大 最耀眼的傳奇
-(Don't give up, don't give up, don't give up, no no no)
-(別放棄 我永遠不會放棄 不論發生任何事情都絕不屈服)
-
-The greatest, the greatest alive
-我就是最偉大 最耀眼的傳奇
-(Don't give up, don't give up, don't give up, no no no)
-(不放棄 我永遠不會放棄 不論發生任何事情都絕不屈服)
-The greatest, the greatest alive
-我就是最偉大 最耀眼的傳奇
-(Don't give up, don't give up, don't give up, no no no)
-(不放棄 我永遠不會放棄 不論發生任何事情都絕不屈服)
-The greatest, the greatest alive
-我就是最偉大 最耀眼的傳奇
-(Don't give up, don't give up, don't give up, no no no)
-(不放棄 我永遠不會放棄 不論發生任何事情都絕不屈服)
-The greatest, the greatest alive
-我就是最偉大 最耀眼的傳奇
-(Don't give up, don't give up, don't give up, no no no)
-(不放棄 我永遠不會放棄 不論發生任何事情都絕不屈服)The greatest, the greatest alive
-我就是最偉大 最耀眼的傳奇
-(Don't give up, don't give up, don't give up, no no no)
-(不放棄 我永遠不會放棄 不論發生任何事情都絕不屈服)The greatest, the greatest alive
-我就是最偉大 最耀眼的傳奇
-(Don't give up, don't give up, don't give up, no no no)
-(不放棄 我永遠不會放棄 不論發生任何事情都絕不屈服)The greatest, the greatest alive
-我就是最偉大 最耀眼的傳奇
-(Don't give up, don't give up, don't give up, no no no)
-(不放棄 我永遠不會放棄 不論發生任何事情都絕不屈服)The greatest, the greatest alive
-我就是最偉大 最耀眼的傳奇
-(Don't give up, don't give up, don't give up, no no no)
-(不放棄 我永遠不會放棄 不論發生任何事情都絕不屈服)"
-    </string>
+    <string name="title_activity_editor">Notes</string>
+    <string name="def_editor_text">Click paste icon to paste your content here</string>
+    <string name="def_editor_note">paste icon|top-right corner</string>
+    <string name="select_a_word">Select a word...</string>
+    <string name="input_note">Input notes...</string>
+    <string name="alert_delete_book">Delete \"%s\"?</string>
+    <string name="ans_yes">Yes</string>
+    <string name="ans_no">No</string>
+    <string name="action_paste">Paste</string>
+    <string name="alert_paste_new_story">Paste new content?</string>
+    <string name="header_text">Text</string>
+    <string name="header_note">Note</string>
+    <string name="key_theme" translatable="false">theme</string>
+    <string name="key_about" translatable="false">about</string>
+    <string name="key_translate_lang_src" translatable="false">lang_srt</string>
+    <string name="key_translate_lang_tgt" translatable="false">lang_tgt</string>
+    <string name="key_speak_src" translatable="false">speak_src</string>
+    <string name="key_speak_tgt" translatable="false">speak_tgt</string>
+    <string name="key_content_inited" translatable="false">content_inited</string>
 </resources>

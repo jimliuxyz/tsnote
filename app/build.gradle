@@ -76,4 +76,8 @@ dependencies {
     // Database debug tool
     debugCompile 'com.amitshekhar.android:debug-db:1.0.0'
 
+    // Http
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.1'
 }

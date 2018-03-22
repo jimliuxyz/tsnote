@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" android:constantSize="true">
+
+    <item android:drawable="@drawable/ic_volume_off_grey_900_24dp" android:state_pressed="true" />
+
+    <item android:drawable="@drawable/ic_volume_up_blue_a400_24dp" android:state_checked="true" />
+
+    <item android:drawable="@drawable/ic_volume_off_grey_900_24dp" />
+    //預設值
+
+</selector>

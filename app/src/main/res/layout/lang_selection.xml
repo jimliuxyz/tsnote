@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+
+    <NumberPicker
+        android:id="@+id/naLangPicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:descendantFocusability="blocksDescendants"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvText" />
+
+    <NumberPicker
+        android:id="@+id/taLangPicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:descendantFocusability="blocksDescendants"
+        app:layout_constraintBottom_toBottomOf="@+id/naLangPicker"
+        app:layout_constraintStart_toEndOf="@+id/swapBtn"
+        app:layout_constraintTop_toBottomOf="@+id/tvNote" />
+
+    <ImageView
+        android:id="@+id/swapBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:tint="?colorAccent"
+        app:layout_constraintBottom_toBottomOf="@+id/naLangPicker"
+        app:layout_constraintStart_toEndOf="@+id/naLangPicker"
+        app:layout_constraintTop_toTopOf="@+id/naLangPicker"
+        app:srcCompat="@drawable/ic_swap_horiz_blue_a400_36dp" />
+
+    <CheckBox
+        android:id="@+id/naLangSpeaker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:button="@drawable/btn_speaker"
+        android:buttonTint="@drawable/btn_speaker_color"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="@+id/naLangPicker"
+        app:layout_constraintStart_toStartOf="@+id/naLangPicker"
+        app:layout_constraintTop_toBottomOf="@+id/naLangPicker" />
+
+
+    <CheckBox
+        android:id="@+id/taLangSpeaker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:button="@drawable/btn_speaker"
+        android:buttonTint="@drawable/btn_speaker_color"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="@+id/taLangPicker"
+        app:layout_constraintStart_toStartOf="@+id/taLangPicker"
+        app:layout_constraintTop_toBottomOf="@+id/taLangPicker" />
+
+    <TextView
+        android:id="@+id/tvText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/header_text"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/naLangPicker"
+        app:layout_constraintStart_toStartOf="@+id/naLangPicker"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/header_note"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/taLangPicker"
+        app:layout_constraintStart_toStartOf="@+id/taLangPicker"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>

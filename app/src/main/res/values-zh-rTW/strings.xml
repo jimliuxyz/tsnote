@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">vocabook2</string>
-    <string name="cfg_dark">暗色系</string>
+    <string name="app_name">翻譯筆記</string>
+    <string name="cfg_dark">夜間模式</string>
     <string name="cfg_theme">主題配色</string>
+    <string name="select_a_word">選擇一個字...</string>
+    <string name="input_note">輸入翻譯/註解...</string>
+    <string name="alert_delete_book">刪除\"%s\"?</string>
+    <string name="ans_yes">是</string>
+    <string name="ans_no">否</string>
+    <string name="action_paste">貼上</string>
+    <string name="alert_paste_new_story">確定要貼上新的內容?</string>
+    <string name="header_text">本文</string>
+    <string name="header_note">譯文</string>
+    <string name="title_activity_editor">翻譯筆記</string>
+    <string name="action_settings">設定</string>
 </resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="colorBgKeyText" format="color"></attr>
+    <attr name="colorBgSelText" format="color"></attr>
+    <attr name="colorTxtKeyNote" format="color"></attr>
+    <attr name="colorTxtSelNote" format="color"></attr>
+</resources>
