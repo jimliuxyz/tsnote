@@ -20,7 +20,7 @@ class BookLocalSrc @Inject constructor(
 
     override fun getBookInfoList(ready: (List<BookInfo>) -> Unit, error: () -> Unit) {
         doIO {
-            context.setPref(R.string.key_content_inited, false)
+            //            context.setPref(R.string.key_content_inited, false)
             if (context.getPref(R.string.key_content_inited, false) == false) {
                 context.setPref(R.string.key_content_inited, true)
                 BookInitContent.init(dao)

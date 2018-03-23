@@ -28,6 +28,9 @@ class MainSettingActivity : BaseActivity() {
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
             addPreferencesFromResource(R.xml.preferences)
+
+            findPreference(getString(R.string.key_version))
+                    ?.setSummary(activity.packageManager.getPackageInfo(activity.packageName, 0).versionName)
         }
 
         var onClickListener = Preference.OnPreferenceClickListener { preference ->
@@ -59,7 +62,7 @@ class MainSettingActivity : BaseActivity() {
 
         override fun onResume() {
             super.onResume()
-            preferenceManager.findPreference(resources.getString(R.string.key_about)).setOnPreferenceClickListener(onClickListener)
+            preferenceManager.findPreference(resources.getString(R.string.key_about))?.setOnPreferenceClickListener(onClickListener)
             preferenceScreen.sharedPreferences.registerOnSharedPreferenceChangeListener(onChangedListener)
         }
 

@@ -42,7 +42,7 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="colorBgKeyText">#816814</item>
-        <item name="colorBgSelText">#ff22fb</item>
+        <item name="colorBgSelText">#22bdff</item>
         <item name="colorTxtKeyNote">#979797</item>
         <item name="colorTxtSelNote">#27ff27</item>
     </style>

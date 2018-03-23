@@ -20,6 +20,8 @@ interface EditorContract {
         fun removeKeyNote(key: String)
 
         fun setSelectionNote(note: String)
+
+        fun showExitHint()
     }
 
     interface Presenter {
@@ -38,5 +40,7 @@ interface EditorContract {
         fun onPasteStory(story: String)
 
         fun saveBook(title: String, story: String)
+
+        fun onBackPressed(): Boolean
     }
 }

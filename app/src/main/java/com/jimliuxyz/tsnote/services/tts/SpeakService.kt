@@ -27,6 +27,10 @@ class SpeakService private constructor(val context: Context) {
         }
     }
 
+    fun stop() {
+        tts?.stop()
+    }
+
     fun speak(text: String, locale: Locale, queueMode: Int = TextToSpeech.QUEUE_FLUSH) {
 
         var locale = if (locale.country != "HK") locale else Locale("yue", "HKG")

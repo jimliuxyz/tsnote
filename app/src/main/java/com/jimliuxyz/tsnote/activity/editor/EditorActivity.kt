@@ -13,6 +13,7 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import com.jimliuxyz.tsnote.BaseActivity
 import com.jimliuxyz.tsnote.R
 import com.jimliuxyz.tsnote.data.book.BookContent
@@ -70,11 +71,21 @@ class EditorActivity : BaseActivity(), EditorContract.View {
             })
         }
 
+
         val processText = intent.getCharSequenceExtra(Intent.EXTRA_PROCESS_TEXT)
         val bookId = intent.getStringExtra(EXTRA_BOOK_ID)
 
         mPresenter.start(this, bookId, processText?.toString() ?: null)
     }
+
+//    override fun onStart() {
+//        super.onStart()
+//
+//        val processText = intent.getCharSequenceExtra(Intent.EXTRA_PROCESS_TEXT)
+//        val bookId = intent.getStringExtra(EXTRA_BOOK_ID)
+//
+//        mPresenter.start(this, bookId, processText?.toString() ?: null)
+//    }
 
     override fun onPause() {
         super.onPause()
@@ -125,7 +136,8 @@ class EditorActivity : BaseActivity(), EditorContract.View {
         return when (item.itemId) {
             R.id.action_paste -> {
                 val cb = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-                cb.primaryClip.getItemAt(0)?.text?.toString()?.takeIf { it.isNotBlank() }?.also { newStory ->
+
+                cb.primaryClip?.takeIf { it.itemCount > 0 }?.getItemAt(0)?.text?.toString()?.takeIf { it.isNotBlank() }?.also { newStory ->
 
                     AlertDialog.Builder(this).setMessage(getString(R.string.alert_paste_new_story))
                             .setPositiveButton(getString(R.string.ans_yes), DialogInterface.OnClickListener { dialog, which ->
@@ -146,8 +158,9 @@ class EditorActivity : BaseActivity(), EditorContract.View {
         tvTitle.setText(info.title, TextView.BufferType.EDITABLE)
 
         tvSelector.setText(content.story)
-        content.keyNotes.forEach {
-            tvSelector.addKeyNote(it.key, it.note)
+
+        for (note in content.keyNotes) {
+            tvSelector.addKeyNote(note.key, note.note)
         }
     }
 
@@ -160,5 +173,14 @@ class EditorActivity : BaseActivity(), EditorContract.View {
             isEnabled = en
             hint = if (en) getString(R.string.input_note) else getString(R.string.select_a_word)
         }
+    }
+
+    override fun onBackPressed() {
+        if (!mPresenter.onBackPressed())
+            super.onBackPressed()
+    }
+
+    override fun showExitHint() {
+        Toast.makeText(this, getString(R.string.press_back_exit), Toast.LENGTH_SHORT).show()
     }
 }

@@ -14,6 +14,9 @@
     <string name="header_note">譯文</string>
     <string name="title_activity_editor">翻譯筆記</string>
     <string name="action_settings">設定</string>
-    <string name="def_editor_text">Click paste icon to paste your content here</string>
-    <string name="def_editor_note">paste icon|top-right corner</string>
+    <string name="def_editor_note">貼上|paste</string>
+    <string name="press_back_exit">再按一次後存檔離開</string>
+    <string name="cfg_information">資訊</string>
+    <string name="cfg_version">版本</string>
+    <string name="def_editor_text">點擊右上角圖標來貼上你要的內容</string>
 </resources>

@@ -5,15 +5,19 @@
 
         <CheckBoxPreference
             android:key="@string/key_theme"
-            android:title="@string/cfg_dark"
-            android:summary="" />
+            android:summary=""
+            android:title="@string/cfg_dark" />
 
     </PreferenceCategory>
 
-    <PreferenceCategory android:title="Settings">
+    <PreferenceCategory android:title="@string/cfg_information">
+        <PreferenceScreen
+            android:key="@string/key_version"
+            android:summary="\?"
+            android:title="@string/cfg_version"></PreferenceScreen>
         <Preference
-            android:title="About"
-            android:key="@string/key_about" />
+            android:key="@string/key_about"
+            android:title="About" />
     </PreferenceCategory>
 
 </PreferenceScreen>

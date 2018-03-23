@@ -22,4 +22,8 @@
     <string name="key_speak_src" translatable="false">speak_src</string>
     <string name="key_speak_tgt" translatable="false">speak_tgt</string>
     <string name="key_content_inited" translatable="false">content_inited</string>
+    <string name="press_back_exit">Press back again to save/exit</string>
+    <string name="cfg_information">Information</string>
+    <string name="cfg_version">Version</string>
+    <string name="key_version">version</string>
 </resources>

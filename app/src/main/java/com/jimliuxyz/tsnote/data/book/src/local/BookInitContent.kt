@@ -147,7 +147,7 @@ It's yesterday once more
                 KeyNote("sing", "петь"),
                 KeyNote("happy", "มีความสุข"),
                 KeyNote("When I was young", "내가 어렸을 때"),
-                KeyNote("friend", "友人"),
+                KeyNote("friend", "người bạn"),
                 KeyNote("yesterday", "어제"),
                 KeyNote("shines", "輝く"),
                 KeyNote("song", "노래들"),

@@ -1,7 +1,6 @@
 package com.jimliuxyz.tsnote.views
 
 import android.content.Context
-import android.os.Parcelable
 import android.support.annotation.AttrRes
 import android.support.annotation.ColorInt
 import android.text.Spannable
@@ -109,22 +108,14 @@ class TextViewSelector @JvmOverloads constructor(
         return typedValue.data
     }
 
-    override fun onRestoreInstanceState(state: Parcelable?) {
-        super.onRestoreInstanceState(state)
-
-        //reset text again after restore state, to clear span
-        setText(text.toString())
-    }
-
-    override fun onSaveInstanceState(): Parcelable {
-
-        (super.getText() as? Spannable)?.removeSpan(wordSpan)
-        val state = super.onSaveInstanceState()
-        (super.getText() as? Spannable)
-                ?.setSpan(wordSpan, 0, text.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
-
-        return state
-    }
+//    override fun onSaveInstanceState(): Parcelable {
+//        (super.getText() as? Spannable)?.removeSpan(wordSpan)
+//        val state = super.onSaveInstanceState()
+//        (super.getText() as? Spannable)
+//                ?.setSpan(wordSpan, 0, text.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+//
+//        return state
+//    }
 
     fun setText(text: String) {
         keySpanMap.clear()
@@ -205,6 +196,9 @@ class TextViewSelector @JvmOverloads constructor(
     fun releaseSelection() {
         wordSpan.selRange.empty()
         fixedRange = null
+        selChangeListener?.let {
+            it(null, null)
+        }
         invalidate()
     }
 

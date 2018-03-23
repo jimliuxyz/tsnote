@@ -27,6 +27,7 @@
             android:paddingLeft="5sp"
             android:paddingRight="5sp"
             android:paddingTop="18sp"
+            android:saveEnabled="false"
             android:text=""
             android:textIsSelectable="true"
             android:textSize="18sp" />
@@ -44,6 +45,7 @@
         android:enabled="false"
         android:hint="@string/select_a_word"
         android:inputType="textNoSuggestions"
+        android:saveEnabled="false"
         android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/buttonTrans"

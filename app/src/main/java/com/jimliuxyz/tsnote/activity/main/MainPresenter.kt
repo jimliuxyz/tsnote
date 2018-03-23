@@ -25,13 +25,17 @@ class MainPresenter @Inject constructor(val repo: BookRepo) : MainContract.Prese
     override fun loadBooks() {
         val mView = mView ?: return
 
-        mView.showRefresher(true)
+        var done = false
         repo.getBookInfoList({
+            done = true
             mView.showBooks(sort(it))
             mView.showRefresher(false)
         }, {
+            done = true
             mView.showRefresher(false)
         })
+        if (!done)
+            mView.showRefresher(true)
     }
 
     override fun delBook(bookId: String) {

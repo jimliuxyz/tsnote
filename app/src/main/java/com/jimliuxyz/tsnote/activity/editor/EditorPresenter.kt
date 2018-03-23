@@ -42,6 +42,7 @@ class EditorPresenter @Inject constructor(
                 ?.trim()
 //                    ?.replace(Regex("[\\s\\p{Punct}].*"), "")
                 ?.replace(Regex("[\\s.,?!。，？！].*"), "")
+                ?.takeIf { it.length > 0 }
                 ?.let {
                     var max = MAX_TITLE_CUTLEN * if (it.toByteArray().size / it.length == 1) 2 else 1
                     it.substring(0, it.length.let { if (it >= max) max else it })
@@ -85,6 +86,7 @@ class EditorPresenter @Inject constructor(
     override fun onSelectionChanged(selText: String?, selKeyText: String?) {
         this.selText = selText
         this.selKeyText = selKeyText
+        mSpeaker.stop()
 
         mView.enNoteInput(selText != null || selKeyText != null)
 
@@ -155,6 +157,25 @@ class EditorPresenter @Inject constructor(
             content?.story = story
             mView.showBook(info!!, content!!)
         }
+    }
+
+    private var backtime = 0L
+    override fun onBackPressed(): Boolean {
+        (selText ?: selKeyText)?.also {
+            mView.releaseSelection()
+            mView.showNoteInput("")
+            mView.enNoteInput(false)
+            return true
+        }
+
+        if (System.currentTimeMillis() - backtime > 2000) {
+            backtime = System.currentTimeMillis()
+            mView.showExitHint()
+            return true
+        }
+
+        mSpeaker.stop()
+        return false
     }
 
     override fun saveBook(title: String, story: String) {

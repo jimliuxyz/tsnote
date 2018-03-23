@@ -24,6 +24,8 @@ class BookRepo @Inject constructor(
     private val DISABLE_REMOTE = true
 
     override fun getBookInfoList(ready: (List<BookInfo>) -> Unit, error: () -> Unit) {
+        println("use cache...$reloadQuest  ${cacheInfo.isNotEmpty()}")
+
         if (!reloadQuest && cacheInfo.isNotEmpty()) {
             //use cache
             ready(cacheInfo.values.toList())
@@ -41,6 +43,7 @@ class BookRepo @Inject constructor(
                 })
             }
         }
+        reloadQuest = false
     }
 
     override fun getBookInfo(bookId: String, ready: (BookInfo) -> Unit, error: () -> Unit) {
@@ -64,6 +67,7 @@ class BookRepo @Inject constructor(
                 })
             }
         }
+        reloadQuest = false
     }
 
     override fun getBook(bookId: String, ready: (BookInfo, BookContent) -> Unit, error: () -> Unit) {
