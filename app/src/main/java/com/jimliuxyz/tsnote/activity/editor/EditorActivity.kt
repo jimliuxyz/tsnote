@@ -54,7 +54,7 @@ class EditorActivity : BaseActivity(), EditorContract.View {
         tvSelector = findViewById<TextViewSelector>(R.id.textViewSelector).apply {
             setSelectionChangedListener(mPresenter::onSelectionChanged)
         }
-        tvTitle = findViewById<TextView>(R.id.tvTitle)
+        tvTitle = findViewById<TextView>(R.id.tvBookTitle)
         etNote = findViewById<EditText>(R.id.etNote)
 
         etNote.apply {

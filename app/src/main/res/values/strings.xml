@@ -25,5 +25,5 @@
     <string name="press_back_exit">Press back again to save/exit</string>
     <string name="cfg_information">Information</string>
     <string name="cfg_version">Version</string>
-    <string name="key_version">version</string>
+    <string name="key_version" translatable="false">version</string>
 </resources>

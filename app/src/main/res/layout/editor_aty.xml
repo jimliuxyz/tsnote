@@ -26,7 +26,7 @@
             app:popupTheme="@style/AppTheme.PopupOverlay">
 
             <EditText
-                android:id="@+id/tvTitle"
+                android:id="@+id/tvBookTitle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="?attr/colorPrimary"

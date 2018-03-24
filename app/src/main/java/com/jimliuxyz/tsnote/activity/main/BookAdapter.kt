@@ -43,11 +43,6 @@ class BookAdapter(var books: List<BookInfo>, val itemListener: ItemListener) : R
             text1.setText(books[pos].title)
 
             text2.setText(fmt.format(books[pos].attentionDate))
-
-
-//            public static String getDateStr(long milliseconds) {
-//                return new SimpleDateFormat("yyyy年MM月dd日 EEEE HH点mm分", Locale.CHINA).format(milliseconds);
-//            }
         }
     }
 

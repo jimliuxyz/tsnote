@@ -20,12 +20,12 @@ import javax.inject.Named
  * Created by jimliu on 2018/3/17.
  */
 class EditorPresenter @Inject constructor(
-        @Named(EditorActivity.EXTRA_BOOK_ID) val mBookId: String?,
-        val context: Context,
-        val mRepo: BookRepo,
-        val mView: EditorContract.View,
-        val mTranslator: TranslateService,
-        val mSpeaker: SpeakService
+        @Named(EditorActivity.EXTRA_BOOK_ID) private val mBookId: String?,
+        private val context: Context,
+        private val mRepo: BookRepo,
+        private val mView: EditorContract.View,
+        private val mTranslator: TranslateService,
+        private val mSpeaker: SpeakService
 ) : EditorContract.Presenter {
 
     var info: BookInfo? = null
@@ -41,11 +41,11 @@ class EditorPresenter @Inject constructor(
         val title = content
                 ?.trim()
 //                    ?.replace(Regex("[\\s\\p{Punct}].*"), "")
-                ?.replace(Regex("[\\s.,?!。，？！].*"), "")
+                ?.replace(Regex("[\\n.,?!。，？！].*"), "")
                 ?.takeIf { it.length > 0 }
                 ?.let {
                     var max = MAX_TITLE_CUTLEN * if (it.toByteArray().size / it.length == 1) 2 else 1
-                    it.substring(0, it.length.let { if (it >= max) max else it })
+                    it.substring(0, it.length.let { if (it >= max) max else it }) + if (it.length >= max) "..." else ""
                 }
         return title ?: ""
     }
