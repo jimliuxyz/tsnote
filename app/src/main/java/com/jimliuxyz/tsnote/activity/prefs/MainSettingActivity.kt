@@ -14,6 +14,10 @@ import com.jimliuxyz.tsnote.R
  * Created by jimliu on 2018/3/8.
  */
 class MainSettingActivity : BaseActivity() {
+    companion object {
+        //seeu 製造memory leak
+        var leakList = ArrayList<Any>()
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
