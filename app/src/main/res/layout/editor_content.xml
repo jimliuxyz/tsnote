@@ -19,6 +19,7 @@
 
         <com.jimliuxyz.tsnote.views.TextViewSelector
             android:id="@+id/textViewSelector"
+            android:focusedByDefault="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="?android:attr/colorBackground"
@@ -46,6 +47,7 @@
         android:hint="@string/select_a_word"
         android:inputType="textNoSuggestions"
         android:saveEnabled="false"
+        android:focusedByDefault="false"
         android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/buttonTrans"

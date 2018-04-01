@@ -53,6 +53,7 @@ class EditorActivity : BaseActivity(), EditorContract.View {
 
         tvSelector = findViewById<TextViewSelector>(R.id.textViewSelector).apply {
             setSelectionChangedListener(mPresenter::onSelectionChanged)
+            requestFocus()
         }
         tvTitle = findViewById<TextView>(R.id.tvBookTitle)
         etNote = findViewById<EditText>(R.id.etNote)
@@ -77,15 +78,6 @@ class EditorActivity : BaseActivity(), EditorContract.View {
 
         mPresenter.start(this, bookId, processText?.toString() ?: null)
     }
-
-//    override fun onStart() {
-//        super.onStart()
-//
-//        val processText = intent.getCharSequenceExtra(Intent.EXTRA_PROCESS_TEXT)
-//        val bookId = intent.getStringExtra(EXTRA_BOOK_ID)
-//
-//        mPresenter.start(this, bookId, processText?.toString() ?: null)
-//    }
 
     override fun onPause() {
         super.onPause()

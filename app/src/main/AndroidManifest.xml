@@ -24,18 +24,34 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <activity android:name="com.jimliuxyz.tsnote.activity.prefs.MainSettingActivity" />
         <activity
             android:name="com.jimliuxyz.tsnote.activity.editor.EditorActivity"
             android:label="@string/title_activity_editor"
             android:theme="@style/AppTheme"
+            android:parentActivityName="com.jimliuxyz.tsnote.activity.main.MainActivity">
             android:windowSoftInputMode="adjustResize|stateUnchanged">
             <intent-filter>
                 <action android:name="android.intent.action.PROCESS_TEXT" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <data android:mimeType="text/plain" />
             </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="tsnote.jimliuxyz.com"
+                    android:scheme="http" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.jimliuxyz.tsnote.activity.main.MainActivity" />
         </activity>
     </application>
 
